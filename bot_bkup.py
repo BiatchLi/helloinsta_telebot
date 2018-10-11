@@ -1,7 +1,6 @@
 import telebot
 import time
 
-# add bot token here 
 bot_token =''
 
 bot = telebot.TeleBot(token=bot_token)

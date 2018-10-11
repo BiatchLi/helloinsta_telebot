@@ -17,19 +17,7 @@ class DBHelper:
                                                    admin DEFAULT none)"""
         self.c.execute(stmt)
         self.conn.commit()
-# tests
-    def fetch_me(self):
-        stmt = "SELECT * FROM data"
-        self.c.execute(stmt)
-        data =  self.c.fetchall()
-        print(data)
 
-    def insert_dumy(self):
-        # stmt = "SELECT * FROM data"
-        self.c.execute("INSERT INTO data (tlgrm_id) VALUES (?) ",(655045110,))
-        self.conn.commit()
-        # print(data)
-# end
     def add_tlgrm_user(self, tlgrm_id, insta_user):
         self.c.execute("INSERT INTO data (tlgrm_id, insta_user) VALUES (?, ?)", (tlgrm_id, insta_user))
         self.conn.commit()
