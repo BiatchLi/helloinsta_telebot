@@ -1,2 +1,0 @@
-token = '663318496:AAE7BWsOEGS7sNvPTuXlKLQ1EfHk93J6vuU'
-chat_id = -1
