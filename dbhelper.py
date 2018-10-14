@@ -9,6 +9,7 @@ class DBHelper:
         self.dbname = dbname
         self.conn = sqlite3.connect(dbname, check_same_thread=False)
         self.c = self.conn.cursor()
+        self.setup()
 
     def setup(self):
         stmt = """CREATE TABLE IF NOT EXISTS data (tlgrm_id INTEGRER NOT NULL,

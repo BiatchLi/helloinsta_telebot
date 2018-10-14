@@ -133,8 +133,9 @@ def recovery(user,posts):
 
 @bot.message_handler(commands=['start'])
 def handle_text(message):
+    print(message)
     if message.chat.type == "private":
-        text = "Hello %s! Contact @BiatchLi to join the game. or incase of recovery enter /allwarnings " % message.from_user.first_name
+        text = "Hello %s! Contact @BiatchLi to join the game. or incase of recovery enter /recovery " % message.from_user.first_name
         bot.send_message(message.chat.id, text)
 
 @bot.message_handler(commands=['listcommands'])
@@ -209,11 +210,11 @@ def handle_text(message):
     msg = bot.send_message(message.chat.id, text)
     temp = game()
 
-# @bot.message_handler(commands=['sendpmsg'])
-# def handle_text(message):
-#     text = "game started."
-#     msg = bot.send_message('@BiatchLi', text)
-#     # temp = game()
+@bot.message_handler(commands=['sendpmsg'])
+def handle_text(message):
+    text = "testing private msgs from bot."
+    msg = bot.send_message(message.from_user.id, text)
+    # temp = game()
 
 # -------------------------------------------------------------
 
