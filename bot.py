@@ -18,7 +18,7 @@ logger = telebot.logger
 
 db = DBHelper()
 
-bot_token = '663318496:AAE7BWsOEGS7sNvPTuXlKLQ1EfHk93J6vuU'
+bot_token = ''
 
 bot = telebot.TeleBot(token=bot_token)
 
@@ -133,7 +133,7 @@ def recovery(user,posts):
 
 @bot.message_handler(commands=['start'])
 def handle_text(message):
-    print(message)
+    # print(message)
     if message.chat.type == "private":
         text = "Hello %s! Contact @BiatchLi to join the game. or incase of recovery enter /recovery " % message.from_user.first_name
         bot.send_message(message.chat.id, text)
